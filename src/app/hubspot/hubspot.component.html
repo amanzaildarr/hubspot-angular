@@ -1,0 +1,24 @@
+<div class="container">
+  <!-- Login with HubSpot Button -->
+  <button (click)="loginWithHubSpot()" class="btn btn-primary" style="margin-top: 10px"> Login with HubSpot </button>
+
+  <!-- Contacts List -->
+  <div *ngIf="contacts && contacts.length > 0 && access_token">
+    <h2>Contacts List</h2>
+    <ul>
+      <li *ngFor="let contact of contacts; let i = index">
+        {{ contact.properties.firstname }} {{ contact.properties.lastname }} - {{ contact.properties.email }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Display a message if no contacts are available -->
+  <div *ngIf="contacts && contacts.length === 0 && access_token">
+    <p>Loading....</p>
+  </div>
+
+  <!-- Display a message if no contacts are available -->
+  <div *ngIf="contacts && contacts.length === 0 && !access_token">
+    <p>No contacts found.</p>
+  </div>
+</div>
