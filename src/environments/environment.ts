@@ -9,9 +9,6 @@ export const environment = {
   production: false,
   autoLogout: true,
   // API_URL: "http://localhost:3000",
-  API_URL: 'https://dev.backend.pesteasyapp.com',
-  Image_Base: 'https://carcopys3.s3.ap-southeast-4.amazonaws.com/',
-  S3_url: 'https://carcopys3.s3.ap-southeast-4.amazonaws.com/',
 };
 
 /*
